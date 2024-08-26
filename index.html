@@ -83,13 +83,13 @@
         }
 
         .fixed-width-table th:not(:first-child), .fixed-width-table td:not(:first-child) {
-            padding: 8px;
-            text-align: center;
-            border: none; /* remove border */
+           width: 100px;
         }
 
         .fixed-width-table th, .fixed-width-table td {
-            width: auto;
+            padding: 8px;
+            text-align: center;
+            border: none; /* remove border */
         }
 
         .fixed-width-table tr:nth-child(1) {
@@ -1032,6 +1032,72 @@
                     <td><button class="audio-button" onclick="playAudio('user_study/easy-1-opt-init/12.wav')">PLAY</button></td>
                 </tr>
             </table>
+<p class="paragraph">Sample: Easy-2. Original recording: <button class="audio-button"
+        onclick="playAudio('user_study/easy-2/src.wav')">PLAY</button>. Resythesized audio: <button class="audio-button"
+        onclick="playAudio('user_study/easy-2/resynthesis.wav')">PLAY</button>.
+</p>
+<table class="fixed-width-table">
+    <tr>
+        <th></th>
+        <th>Init</th>
+        <th>Query 1</th>
+        <th>Query 2</th>
+        <th>Query 3</th>
+        <th>Query 4</th>
+        <th>Query 5</th>
+        <th>Query 6</th>
+        <th>Query 7</th>
+        <th>Query 8</th>
+        <th>Query 9</th>
+        <th>Query 10</th>
+        <th>Final</th>
+    </tr>
+    <tr>
+        <td>Simulated Search (PCA16 Iter2)</td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/1.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/2.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/3.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/4.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/5.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/6.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/7.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/8.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/9.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/10.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/11.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2/12.wav')">PLAY</button></td>
+    </tr>
+    <tr>
+        <td>User Search (AVG-Init)</td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/1.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/2.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/3.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/4.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/5.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/6.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/7.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/8.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/9.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/10.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/11.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-avg-init/12.wav')">PLAY</button></td>
+    </tr>
+    <tr>
+        <td>User Search (OPT-Init)</td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/1.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/2.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/3.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/4.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/5.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/6.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/7.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/8.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/9.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/10.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/11.wav')">PLAY</button></td>
+        <td><button class="audio-button" onclick="playAudio('user_study/easy-2-opt-init/12.wav')">PLAY</button></td>
+    </tr>
+</table>
         </div>
     </div>
     <div class="section">
