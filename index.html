@@ -83,7 +83,29 @@
         }
 
         .fixed-width-table th:not(:first-child), .fixed-width-table td:not(:first-child) {
-            width: 100px;
+            padding: 8px;
+            text-align: center;
+            border: none; /* remove border */
+        }
+
+        .fixed-width-table th, .fixed-width-table td {
+            width: auto;
+        }
+
+        .fixed-width-table tr:nth-child(1) {
+            background-color: skyblue;
+        }
+
+        .fixed-width-table tr:nth-child(2) {
+            background-color: white;
+        }
+
+       .fixed-width-table tr:nth-child(3) {
+            background-color: skyblue;
+        }
+
+        .fixed-width-table tr:nth-child(4) {
+            background-color: white;
         }
         
 
