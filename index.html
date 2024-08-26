@@ -46,9 +46,18 @@
             display: block;
         }
 
+        .table-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: nowrap;
+            margin-bottom: 40px;
+        }
+
        table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
 
         th,
@@ -89,6 +98,11 @@
             border: 1px solid #555;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        .note {
+            text-align: center;
+            margin-bottom: 10px;
         }
 
     </style>
@@ -318,6 +332,120 @@
                 </tr>
             </table>
 
+<!-- Second set of tables -->
+<div class="table-container">
+    <div>
+        <p class="note">Female voice ID: train-clean-100/7511/102419/7511_102419_000028_000012.wav</p>
+        <table>
+            <tr>
+                <th rowspan="2">Index</th>
+                <th colspan="2">VITS</th>
+                <th colspan="2">ECAPA-TDNN (SV)</th>
+                <th colspan="2">ECAPA-TDNN (NANSY)</th>
+            </tr>
+            <tr>
+                <th>z+4.0 &sigma w<sub>i</sub></th>
+                <th>z-4.0 &sigma w<sub>i</sub></th>
+                <th>z+4.0 &sigma w<sub>i</sub></th>
+                <th>z-4.0 &sigma w<sub>i</sub></th>
+                <th>z+4.0 &sigma w<sub>i</sub></th>
+                <th>z-4.0 &sigma w<sub>i</sub></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_1/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_1/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_1/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_2/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_2/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_2/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_3/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_3/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_3/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/F_pca/pca_4/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/F_pca/pca_4/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/F_pca/pca_4/2.wav')">PLAY</button></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div>
+        <p class="note">Male voice ID: train-clean-100/4830/25904/4830_25904_000008_000000.wav</p>
+        <table>
+            <tr>
+                <th rowspan="2">Index</th>
+                <th colspan="2">VITS</th>
+                <th colspan="2">ECAPA-TDNN (SV)</th>
+                <th colspan="2">ECAPA-TDNN (NANSY)</th>
+            </tr>
+            <tr>
+                <th>z+4.0&sigmaw<sub>i</sub></th>
+                <th>z-4.0&sigmaw<sub>i</sub></th>
+                <th>z+4.0&sigmaw<sub>i</sub></th>
+                <th>z-4.0&sigmaw<sub>i</sub></th>
+                <th>z+4.0&sigmaw<sub>i</sub></th>
+                <th>z-4.0&sigmaw<sub>i</sub></th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_1/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_1/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_1/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_1/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_2/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_2/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_2/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_2/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_3/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_3/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_3/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_3/2.wav')">PLAY</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('vits/M_pca/pca_4/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_sv/M_pca/pca_4/2.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_4/1.wav')">PLAY</button></td>
+                <td><button class="audio-button" onclick="playAudio('ecapa_nansy/M_pca/pca_4/2.wav')">PLAY</button></td>
+            </tr>
+        </table>
+    </div>
         </div>
     </div>
     <div class="section">
