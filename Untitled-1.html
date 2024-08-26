@@ -4,132 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Clips Table</title>
+    <title>Demo Page</title>
     <style>
-        .table-container {
-            display: flex;
-            gap: 20px;
-            justify-content: flex-start;
-        }
-
-        table {
-            width: 45%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th,
-        td {
-            padding: 8px;
-            text-align: center;
-            border: 1px solid darkgrey;
-        }
-
-        .audio-button {
-            display: inline-block;
-            width: 50px;
-            height: 30px;
+        body {
             background-color: #f0f0f0;
-            border: 1px solid #555;
-            border-radius: 4px;
-            cursor: pointer;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
         }
 
-        .note {
+        .page-title {
             text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 24px;
             margin-bottom: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
-    <div class="table-container">
-        <div>
-            <p class="note">Female voice ID: spk1_1.wav</p>
-            <table>
-                <tr>
-                    <th rowspan="2">Index</th>
-                    <th colspan="2">VITS</th>
-                    <th colspan="2">ECAPA-TDNN (SV)</th>
-                    <th colspan="2">ECAPA-TDNN (NANSY)</th>
-                    </tr>
-                    <tr>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    </tr>
-                    <tr>
-                    <td>1</td>
-                    <td><button class="audio-button" onclick="playAudio('vits1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('vits1_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv1_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy1_clip2.mp3')">PLAY</button></td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td><button class="audio-button" onclick="playAudio('vits2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('vits2_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv2_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy2_clip2.mp3')">PLAY</button></td>
-                    </tr>
-            </table>
-            </div>
-            
-            <div>
-                <p class="note">Male voice ID: spk2_1.wav</p>
-                <table>
-                <tr>
-                    <th rowspan="2">Index</th>
-                    <th colspan="2">VITS</th>
-                    <th colspan="2">ECAPA-TDNN (SV)</th>
-                    <th colspan="2">ECAPA-TDNN (NANSY)</th>
-                    </tr>
-                    <tr>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    <th>z+4.0&sigma;w<sub>i</sub></th>
-                    <th>z-4.0&sigma;w<sub>i</sub></th>
-                    </tr>
-                    <tr>
-                    <td>1</td>
-                    <td><button class="audio-button" onclick="playAudio('vits1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('vits1_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv1_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy1_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy1_clip2.mp3')">PLAY</button></td>
-                    </tr>
-                    <tr>
-                    <td>2</td>
-                    <td><button class="audio-button" onclick="playAudio('vits2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('vits2_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_sv2_clip2.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy2_clip1.mp3')">PLAY</button></td>
-                    <td><button class="audio-button" onclick="playAudio('ecapa_nansy2_clip2.mp3')">PLAY</button></td>
-                    </tr>
-            </table>
-            </div>
-            </div>
-            
-            <audio id="audioPlayer" style="display:none;"></audio>
-
-    <script>
-        function playAudio(src) {
-            var audioPlayer = document.getElementById('audioPlayer');
-            audioPlayer.src = src;
-            audioPlayer.play();
-        }
-    </script>
-    </body>
+    <div class="page-title">Demo Page</div>
+    <div class="section">
+        <div class="section-title">Section 1</div>
+        <p>Content for the first section goes here.</p>
+    </div>
+    <div class="section">
+        <div class="section-title">Section 2</div>
+        <p>Content for the second section goes here.</p>
+    </div>
+    <div class="section">
+        <div class="section-title">Section 3</div>
+        <p>Content for the third section goes here.</p>
+    </div>
+</body>
 
 </html>
