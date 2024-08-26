@@ -28,6 +28,12 @@
             align-items: center;
         }
 
+        .pagetitle {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
         .triangle {
             margin-right: 10px;
             transition: transform 0.3s;
@@ -48,7 +54,7 @@
 
         .table-container {
             display: flex;
-            gap: 60px;
+            gap: 100px;
             justify-content: center;
             margin-bottom: 40px;
         }
@@ -172,11 +178,11 @@
 </head>
 
 <body>
-    <h1>Demo Page</h1>
+    <div class="pagetitle">Demo Page</div>
     <div class="section">
         <div class="title" onclick="toggleSection(event)">
             <span class="triangle">▶</span>
-            <span>Voice Reconstruction Fidelity with Varying Number of Principal Components</span>
+            <span>Voice Reconstruction with Varying Number of Principal Components</span>
         </div>
         <div class="content">
             <table>
