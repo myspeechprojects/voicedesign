@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            /* Dark grey color */
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .triangle {
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .content {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .open .triangle {
+            transform: rotate(90deg);
+        }
+
+        .open .content {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th:first-child,
+        td:first-child {
+            text-align: left;
+            width: 15%;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 20%;
+        }
+
+        .play-button {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+        function toggleSection(event) {
+            const section = event.currentTarget.parentElement;
+            section.classList.toggle('open');
+        }
+
+        function playAudio(src) {
+            const audio = new Audio(src);
+            audio.play();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Demo Page</h1>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Reconstruction Fidelity with Varying Number of Principal Components</span>
+        </div>
+        <div class="content">
+            <table>
+                <tr>
+                    <th>Scenario</th>
+                    <th>#Principal Components</th>
+                    <th>8</th>
+                    <th>16</th>
+                    <th>32</th>
+                    <th>Full</th>
+                </tr>
+                <!-- Scenario 1 -->
+                <tr>
+                    <td rowspan="3">Scenario 1</td>
+                    <td>VITS</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits_16.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits_32.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits_full.mp3')">Play</button></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">ECAPA_TDNN (SV)</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv_16.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv_32.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv_full.mp3')">Play</button></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">ECAPA_TDNN (NANSY)</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy_16.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy_32.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy_full.mp3')">Play</button>
+                    </td>
+                </tr>
+                <!-- Scenario 2 -->
+                <tr>
+                    <td rowspan="3">Scenario 2</td>
+                    <td>VITS</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits2_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits2_16.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits2_32.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/vits2_full.mp3')">Play</button></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">ECAPA_TDNN (SV)</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv2_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv2_16.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv2_32.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_sv2_full.mp3')">Play</button></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">ECAPA_TDNN (NANSY)</td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy2_8.mp3')">Play</button></td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy2_16.mp3')">Play</button>
+                    </td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy2_32.mp3')">Play</button>
+                    </td>
+                    <td><button class="play-button" onclick="playAudio('path/to/ecapa_nansy2_full.mp3')">Play</button>
+                    </td>
+                </tr>
+                <!-- Add more scenarios as needed -->
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Shifting Speaker Embedding Along Principal Directions</span>
+        </div>
+        <div class="content">
+            <p>Information on shifting speaker embeddings...</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Search Within Latent Space</span>
+        </div>
+        <div class="content">
+            <p>Details on voice search within latent space...</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Editing Within Latent Space</span>
+        </div>
+        <div class="content">
+            <p>Information about voice editing within latent space...</p>
+        </div>
+    </div>
+</body>
+
+</html>
