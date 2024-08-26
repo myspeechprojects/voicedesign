@@ -13,9 +13,16 @@
 
         th,
         td {
-            border: 1px solid #ccc;
             padding: 8px;
             text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background-color: skyblue;
+        }
+
+        tr:nth-child(even) {
+            background-color: white;
         }
 
         .audio-button {
@@ -37,7 +44,7 @@
             <th colspan="4">VITS</th>
             <th colspan="4">ECAPA_TDNN (SV)</th>
             <th colspan="4">ECAPA_TDNN (NANSY)</th>
-            </tr>
+        </tr>
         <tr>
             <th>npc=8</th>
             <th>npc=16</th>
@@ -51,8 +58,8 @@
             <th>npc=16</th>
             <th>npc=32</th>
             <th>full</th>
-            </tr>
-            <tr>
+        </tr>
+        <tr>
             <td>spk1_1.wav</td>
             <td><button class="audio-button" onclick="playAudio('vits8.mp3')">PLAY</button></td>
             <td><button class="audio-button" onclick="playAudio('vits16.mp3')">PLAY</button></td>
@@ -66,17 +73,34 @@
             <td><button class="audio-button" onclick="playAudio('ecapa_nansy16.mp3')">PLAY</button></td>
             <td><button class="audio-button" onclick="playAudio('ecapa_nansy32.mp3')">PLAY</button></td>
             <td><button class="audio-button" onclick="playAudio('ecapa_nansyfull.mp3')">PLAY</button></td>
-            </tr>
+        </tr>
+        <tr>
+            <td>spk2_1.wav</td>
+            <td><button class="audio-button" onclick="playAudio('vits8_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('vits16_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('vits32_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('vitsfull_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_sv8_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_sv16_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_sv32_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_svfull_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_nansy8_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_nansy16_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_nansy32_2.mp3')">PLAY</button></td>
+            <td><button class="audio-button" onclick="playAudio('ecapa_nansyfull_2.mp3')">PLAY</button></td>
+        </tr>
+        <!-- Add more rows here as needed -->
     </table>
-<audio id="audioPlayer" style="display:none;"></audio>
 
-<script>
-    function playAudio(src) {
-        var audioPlayer = document.getElementById('audioPlayer');
-        audioPlayer.src = src;
-        audioPlayer.play();
-    }
-</script>
+    <audio id="audioPlayer" style="display:none;"></audio>
+
+    <script>
+        function playAudio(src) {
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = src;
+            audioPlayer.play();
+        }
+    </script>
 </body>
 
 </html>
