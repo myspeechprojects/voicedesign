@@ -31,8 +31,32 @@
         .section-title {
             text-align: center;
             font-size: 24px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-weight: bold;
+        }
+
+        .single-table {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        table {
+            width: 200px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid darkgrey;
         }
     </style>
 </head>
@@ -41,7 +65,34 @@
     <div class="page-title">Demo Page</div>
     <div class="section">
         <div class="section-title">Section 1</div>
-        <p>Content for the first section goes here.</p>
+        <div class="single-table">
+            <table>
+                <tr>
+                    <th>Top Table Header</th>
+                </tr>
+                <tr>
+                    <td>Top Table Data</td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Header 1</th>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>Header 2</th>
+                </tr>
+                <tr>
+                    <td>Data 2</td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div class="section">
         <div class="section-title">Section 2</div>
