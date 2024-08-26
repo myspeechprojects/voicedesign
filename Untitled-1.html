@@ -79,14 +79,20 @@
         }
     </style>
     <script>
+                let currentAudio = null;
+
         function toggleSection(event) {
             const section = event.currentTarget.parentElement;
             section.classList.toggle('open');
         }
 
         function playAudio(src) {
-            const audio = new Audio(src);
-            audio.play();
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            currentAudio = new Audio(src);
+            currentAudio.play();
         }
     </script>
 </head>
