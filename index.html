@@ -1,25 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Demo Page</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+            /* Dark grey color */
         }
+
         h1 {
-            color: blue;
-            font-size: 3em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .triangle {
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .content {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .open .triangle {
+            transform: rotate(90deg);
+        }
+
+        .open .content {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th:first-child,
+        td:first-child {
+            text-align: left;
+        }
+
+        .play-button {
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 4px;
         }
     </style>
+    <script>
+        function toggleSection(event) {
+            const section = event.currentTarget.parentElement;
+            section.classList.toggle('open');
+        }
+
+        function playAudio(src) {
+            const audio = new Audio(src);
+            audio.play();
+        }
+    </script>
 </head>
+
 <body>
-    <h1>Coming Soon</h1>
+    <h1>Demo Page</h1>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Reconstruction Fidelity with Varying Number of Principal Components</span>
+        </div>
+        <div class="content">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>#Principal Components</th>
+                    <th>8</th>
+                    <th>16</th>
+                    <th>32</th>
+                    <th>Full</th>
+                </tr>
+                <!-- Scenario 1 -->
+                <tr>
+                    <td rowspan="3">Sample 1</td>
+                    <td>VITS</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_8/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_16/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_32/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/resynthesis/432_122761_000005_000000.wav')">Play</button></td>
+                </tr>
+                <tr>
+                    <td>ECAPA_TDNN (SV)</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_8/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_16/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_32/432_122761_000005_000000.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/resynthesis/432_122761_000005_000000.wav')">Play</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ECAPA_TDNN (NANSY)</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_8/432_122761_000005_000000.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_16/432_122761_000005_000000.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_32/432_122761_000005_000000.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/resynthesis/432_122761_000005_000000.wav')">Play</button>
+                    </td>
+                </tr>
+                <!-- Scenario 2 -->
+                <tr>
+                    <td rowspan="3">Sample 2</td>
+                    <td>VITS</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_8/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_16/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/npca_32/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('vits/M_recon/resynthesis/2740_162051_000006_000002.wav')">Play</button></td>
+                </tr>
+                <tr>
+                    <td>ECAPA_TDNN (SV)</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_8/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_16/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/npca_32/2740_162051_000006_000002.wav')">Play</button></td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_sv/M_recon/resynthesis/2740_162051_000006_000002.wav')">Play</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ECAPA_TDNN (NANSY)</td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_8/2740_162051_000006_000002.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_16/2740_162051_000006_000002.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/npca_32/2740_162051_000006_000002.wav')">Play</button>
+                    </td>
+                    <td><button class="play-button"
+                            onclick="playAudio('ecapa_nansy/M_recon/resynthesis/2740_162051_000006_000002.wav')">Play</button>
+                    </td>
+                </tr>
+                <!-- Add more scenarios as needed -->
+            </table>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Shifting Speaker Embedding Along Principal Directions</span>
+        </div>
+        <div class="content">
+            <p>Information on shifting speaker embeddings...</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Search Within Latent Space</span>
+        </div>
+        <div class="content">
+            <p>Details on voice search within latent space...</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="title" onclick="toggleSection(event)">
+            <span class="triangle">▶</span>
+            <span>Voice Editing Within Latent Space</span>
+        </div>
+        <div class="content">
+            <p>Information about voice editing within latent space...</p>
+        </div>
+    </div>
 </body>
+
 </html>
